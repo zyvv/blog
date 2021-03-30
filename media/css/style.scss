@@ -20,6 +20,7 @@ $font: $font-name, "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
 $monospace: "Fira Mono", monospace;
 $label-font: $font-name, "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
 $time-font: "Ubuntu", monospace;
+$accent-color: #0062cb;
 $color: #222D32;
 $background-color: #f2f1f6;
 $dark-background-color: #1d1d1e;
@@ -42,7 +43,7 @@ li { padding: .2em 0; }
 hr { width: 4em; border: none; border-top: 1px dashed #d0d0d0; border-bottom: 1px dashed background-color; }
 .center { text-align: center; }
 ::selection { color: #fff; background-color: #333; }
-a { text-decoration: none; color: #0062CB; &:hover { color: #0062CB; }; }
+a { text-decoration: none; color: $accent-color; &:hover { color: $accent-color; }; }
 
 blockquote {
  background-color: #f8f8f8; 
@@ -168,7 +169,7 @@ article {
     a { @extend a;
       font-family: #{$label-font};
       margin: 0 2em;
-      i { color: #999999; margin: 0; &:hover { color: #bb2222 !important; } }
+      i { color: #999999; margin: 0; &:hover { color: $accent-color !important; } }
     }
   }
   .divider {
