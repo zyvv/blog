@@ -1,22 +1,13 @@
 ---
-title: about
+title: 关于
 layout: page
 ---
 
-a
 
-> Minimalist | Appleist | Unixer | Coder
 
-who involved in 
+一名 iOS 开发者。 
 
-> [github](https://github.com/waynezhang)
 
-mail 
+---
+本站由<a href="https://github.com/jekyll/jekyll" title="jekyll">jekyll</a>生成，主题来自<a href="https://github.com/waynezhang/blog" title="sext vi">sext vi</a>
 
-> echo srvpqxfbyqfvpdtkbjwt | tr yxwvtsrqpkjfdb zuonmlihgeca@.
-
-or follow 
-
-> [@o_lll](https://twitter.com/#!/o_lll)
-
-to reach me

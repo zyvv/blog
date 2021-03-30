@@ -10,9 +10,10 @@
  * --------------------------------- */
 
 @import url(/media/fonts/telex-regular.css);
-@import url(http://fonts.googleapis.com/css?family=Ubuntu:300);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300);
 @import url(//code.cdn.mozilla.net/fonts/fira.css);
 @import "media-queries";
+@import url(/media/css/tomorrow.css);
 
 $font-name: "telexregular";
 $font: $font-name, "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
@@ -20,6 +21,10 @@ $monospace: "Fira Mono", monospace;
 $label-font: $font-name, "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
 $time-font: "Ubuntu", monospace;
 $background-color: #f9f9f9;
+$dark-background-color: #222;
+$dark-color: #999999;
+$dark-code-barkground-color: #1d1d1d;
+$dark-title-barkground-color: #ccc;
 
 @mixin page {
   margin: 0 auto;
@@ -33,13 +38,56 @@ $background-color: #f9f9f9;
 body { font-size: 14px; font-family: #{$font}; color: #555; background-color: $background-color; -webkit-font-smoothing: antialiased; }
 ol, ul { list-style-position: inside; }
 li { padding: .2em 0; }
-hr { width: 4em; border: none; border-top: 1px dashed #d0d0d0; border-bottom: 1px dashed #f9f9f9; }
+hr { width: 4em; border: none; border-top: 1px dashed #d0d0d0; border-bottom: 1px dashed background-color; }
 .center { text-align: center; }
 ::selection { color: #fff; background-color: #333; }
 a { text-decoration: none; color: #bb2222; &:hover { color: #dd1144; }; }
-blockquote { background-color: #f8f8f8; padding: 0 1em; border: 1px dashed #eee !important; border-color: #e0e0e0 !important; font-size: 13px; line-height: 1.6; display: block; overflow: auto; }
-pre code { @extend blockquote; }
-code { background-color: #f8f8f8; padding: 2px 5px; border: 1px dashed #e0e0e0; font-family: #{$monospace}; }
+
+blockquote {
+ background-color: #f8f8f8; 
+ padding: 0 1em; 
+ border-left: 3px solid #e0e0e0; 
+ font-size: 13px; 
+ font-family: #{$monospace};
+ line-height: 1.6; 
+ display: block; 
+ overflow: auto; }
+
+
+
+code {
+  padding: .4em;
+  padding-top: .2em;
+  padding-bottom: .1em;
+  background: lighten(#5BA4E5, 32%);
+  border: 1px solid lighten(#5BA4E5, 25%);
+  border-radius: 3px;
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  font-size: .9em;
+  vertical-align: middle;
+  word-wrap: break-word;
+}
+
+pre {
+  margin-bottom: 1.3em;
+  padding: 1em 2.5%;
+  background: lighten(#5BA4E5, 32%);
+  border: 1px solid lighten(#5BA4E5, 25%);
+  border-radius: 3px;
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  font-size: .9em;
+  font-weight: normal;
+  line-height: 1.3em;
+  overflow:hidden;
+  code {
+  	padding: .0em !important;
+    background-color: lighten(#5BA4E5, 32%) !important; 
+    background: lighten(#5BA4E5, 32%) !important;
+    border: none;
+  }
+}
+
+
 h1, h2 { font-size: 1.4em; }
 time { font-family: #{$time-font} }
 
@@ -67,7 +115,7 @@ header {
     top: 1em;
     span { margin: .5em; }
     a {
-      font-family: #{$label-font}; color: #ccc;
+      font-family: #{$label-font}; color: $dark-title-barkground-color;
     }
   }
 }
@@ -83,8 +131,12 @@ ul.listing {
   li {
     list-style-type:none;
     padding: 0;
-    &.listing-item { a { padding: .2em 0 .2em 2em; } time { color: #999; } &:hover { background-color: #f9f9f9; } }
-    &.listing-seperator { font-family: #{$label-font}; &:before { content: "⭠ "; color: #ccc; } }
+    &.listing-item { a { padding: .2em 0 .2em 2em; } time { color: #999; } &:hover { background-color: $background-color; } }
+    &.fa-li { 
+      color: $dark-title-barkground-color; 
+      padding-right: 5px;
+      font-family: #{$label-font};
+    }
   }
 }
 
@@ -156,9 +208,55 @@ footer {
 .gist { font-size: 13px; line-height:1.6; }
 
 // like
-.like-wrapper {
+/*.like-wrapper {
   color: #999;
   .like-button, .unlike-button { font-family: "FontAwesome"; padding-right: 5px; }
   .like-button:hover { color: #dd1144; }
   .like-button.liked:hover { color: #999; }
+}*/
+
+@media (prefers-color-scheme: dark) {
+  header {
+    #header {
+      h1 {
+        a {
+          color: $dark-title-barkground-color;
+        }
+      }
+    }
+  }
+  body { color: $dark-color; background-color: $dark-background-color; }
+  blockquote { background-color: $dark-background-color;  border-left: 3px solid $dark-color; }
+  code { background: $dark-code-barkground-color; border: 1px solid $dark-code-barkground-color; }
+  pre {
+    background: $dark-code-barkground-color;
+    border: 1px solid $dark-code-barkground-color;
+    code {
+      background-color: $dark-code-barkground-color !important; 
+      background: $dark-code-barkground-color !important;
+    }
+  }
+  article {
+    .title {
+      a { color: $dark-title-barkground-color; }
+    }
+    .meta {
+      .tags a { color: $dark-color; }
+    }
+    .divider {
+      i {color: $dark-color; }
+      a { i { color: $dark-color } }
+    }
+    .divider:before, .divider:after { background-color: rgba(228, 227, 255, 0.15); }
+  }
+  ul.listing {
+    li {
+      &.listing-item { &:hover { background-color: $dark-background-color; } }
+      &.year-seperator { color: $dark-title-barkground-color; }
+    }
+  }
+  footer {
+    color: $dark-color;
+    a { color: $dark-color; &:hover { color: $dark-color; }; }
+  }
 }

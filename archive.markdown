@@ -1,5 +1,5 @@
 ---
-title: archive
+title: 列表
 layout: page
 ---
 
@@ -8,10 +8,10 @@ layout: page
   {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
   {% if year != y %}
     {% assign year = y %}
-    <li class="listing-seperator">{{ y }}</li>
+    <li><i class="fa-li fa fa-quote-left"></i>{{ y }}</li>
   {% endif %}
   <li class="listing-item">
-    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <time datetime="{{ post.date | date:"%m-%d" }}">{{ post.date | date:"%m-%d" }}</time>
     <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
   </li>
 {% endfor %}

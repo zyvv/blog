@@ -3,6 +3,6 @@ title: 404
 layout: page
 ---
 
-Nothing found :(
+这里什么都没有 :(
 
-But you still can have a [look around](/index.html)
+你可以到[列表](/archive.html)去找找看~
