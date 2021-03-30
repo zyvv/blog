@@ -8,10 +8,10 @@
  * |/ | (~ (~
  * |\.|._)._)
  * --------------------------------- */
-@import url(/media/fonts/telex-regular.css);
+@import url(/source/fonts/telex-regular.css);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:300);
 @import url(//code.cdn.mozilla.net/fonts/fira.css);
-@import url(/media/css/tomorrow.css);
+@import url(/source/css/tomorrow.css);
 * {
   margin: 0;
   padding: 0;
