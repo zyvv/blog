@@ -20,9 +20,10 @@ $font: $font-name, "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
 $monospace: "Fira Mono", monospace;
 $label-font: $font-name, "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
 $time-font: "Ubuntu", monospace;
-$background-color: #f9f9f9;
-$dark-background-color: #222;
-$dark-color: #999999;
+$color: #222D32;
+$background-color: #f2f1f6;
+$dark-background-color: #1d1d1e;
+$dark-color: #FFFFFF;
 $dark-code-barkground-color: #1d1d1d;
 $dark-title-barkground-color: #ccc;
 
@@ -35,13 +36,13 @@ $dark-title-barkground-color: #ccc;
 }
 
 * { margin: 0; padding: 0; }
-body { font-size: 14px; font-family: #{$font}; color: #555; background-color: $background-color; -webkit-font-smoothing: antialiased; }
+body { font-size: 14px; font-family: #{$font}; color: $color; background-color: $background-color; -webkit-font-smoothing: antialiased; }
 ol, ul { list-style-position: inside; }
 li { padding: .2em 0; }
 hr { width: 4em; border: none; border-top: 1px dashed #d0d0d0; border-bottom: 1px dashed background-color; }
 .center { text-align: center; }
 ::selection { color: #fff; background-color: #333; }
-a { text-decoration: none; color: #bb2222; &:hover { color: #dd1144; }; }
+a { text-decoration: none; color: #0062CB; &:hover { color: #0062CB; }; }
 
 blockquote {
  background-color: #f8f8f8; 
