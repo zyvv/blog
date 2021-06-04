@@ -11,17 +11,301 @@
 @import url(/media/fonts/telex-regular.css);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:300);
 @import url(//code.cdn.mozilla.net/fonts/fira.css);
-@import url(/media/css/tomorrow.css);
+pre.highlight {
+  border: 1px var(--separator-opaque) solid;
+  border-radius: 4px;
+  overflow: auto;
+  padding: 0.5em 1em;
+  margin-bottom: 1em;
+}
+
+pre.highlight code {
+  color: var(--text);
+  background: transparent !important;
+}
+
+pre.highlight[data-lang="JWT"] {
+  white-space: pre-wrap;
+}
+
+.highlight .placeholder {
+  color: var(--text);
+}
+
+.highlight .o {
+  color: var(--text);
+}
+
+.highlight .p {
+  color: var(--gray);
+}
+
+.highlight .err {
+  color: var(--gray);
+}
+
+.highlight .s,
+.highlight .sa,
+.highlight .sb,
+.highlight .sc,
+.highlight .dl,
+.highlight .sd,
+.highlight .s2,
+.highlight .sh,
+.highlight .sx,
+.highlight .sr,
+.highlight .s1,
+.highlight .ss {
+  color: var(--orange);
+}
+
+.highlight .se,
+.highlight .si {
+  color: var(--text);
+}
+
+.highlight .k,
+.highlight .kc,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr {
+  color: var(--purple);
+}
+
+.highlight .kt {
+  color: var(--text);
+}
+
+.highlight .kd + .kt {
+  color: var(--text);
+}
+
+.highlight .go,
+.highlight .nc,
+.highlight .nf,
+.highlight .nv {
+  color: var(--text);
+}
+
+.highlight .kt + .o + .n,
+.highlight .nf {
+  color: var(--indigo);
+}
+
+.highlight .cp,
+.highlight .c1 {
+  color: var(--gray);
+}
+
+.highlight .n,
+.highlight .na,
+.highlight .nb,
+.highlight .bp,
+.highlight .no,
+.highlight .nd,
+.highlight .ni,
+.highlight .py,
+.highlight .nl,
+.highlight .nn,
+.highlight .nx,
+.highlight .nt,
+.highlight .vc,
+.highlight .vg,
+.highlight .vi {
+  color: var(--text);
+}
+
+.highlight .l,
+.highlight .ld,
+.highlight .s,
+.highlight .sb,
+.highlight .sc,
+.highlight .sd,
+.highlight .s2,
+.highlight .se,
+.highlight .sh,
+.highlight .si,
+.highlight .sx,
+.highlight .sr,
+.highlight .s1,
+.highlight .ss,
+.highlight .m,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .il,
+.highlight .mo,
+.highlight .mx,
+.highlight .mb {
+  color: var(--indigo);
+}
+
+@media (prefers-color-scheme: dark) {
+  .highlight .p {
+    color: var(--gray2);
+  }
+  .highlight .err {
+    color: var(--gray);
+  }
+  .highlight .s,
+  .highlight .sa,
+  .highlight .sb,
+  .highlight .sc,
+  .highlight .dl,
+  .highlight .sd,
+  .highlight .s2,
+  .highlight .sh,
+  .highlight .sx,
+  .highlight .sr,
+  .highlight .s1,
+  .highlight .ss {
+    color: var(--green);
+  }
+  .highlight .se,
+  .highlight .si {
+    color: var(--text);
+  }
+  .highlight .k,
+  .highlight .kc,
+  .highlight .kd,
+  .highlight .kn,
+  .highlight .kp,
+  .highlight .kr {
+    color: var(--teal);
+  }
+  .highlight .kt {
+    color: var(--yellow);
+  }
+  .highlight .kd + .kt {
+    color: var(--orange);
+  }
+  .highlight .go,
+  .highlight .nc,
+  .highlight .nf,
+  .highlight .nv {
+    color: var(--text);
+  }
+  .highlight .kt + .o + .n,
+  .highlight .nf {
+    color: var(--purple);
+  }
+  .highlight .cp {
+    color: var(--red);
+  }
+  .highlight .c1 {
+    color: var(--gray2);
+  }
+  .highlight .n + .o + .n,
+  .highlight .na,
+  .highlight .nb,
+  .highlight .bp,
+  .highlight .no,
+  .highlight .nd,
+  .highlight .ni,
+  .highlight .py,
+  .highlight .nl,
+  .highlight .nn,
+  .highlight .nx,
+  .highlight .nt,
+  .highlight .vc,
+  .highlight .vg,
+  .highlight .vi {
+    color: var(--pink);
+  }
+  .highlight .l,
+  .highlight .ld,
+  .highlight .s,
+  .highlight .sb,
+  .highlight .sc,
+  .highlight .sd,
+  .highlight .s2,
+  .highlight .se,
+  .highlight .sh,
+  .highlight .si,
+  .highlight .sx,
+  .highlight .sr,
+  .highlight .s1,
+  .highlight .ss,
+  .highlight .m,
+  .highlight .mf,
+  .highlight .mh,
+  .highlight .mi,
+  .highlight .il,
+  .highlight .mo,
+  .highlight .mx,
+  .highlight .mb {
+    color: var(--orange);
+  }
+}
+
+:root {
+  --red: rgb(255, 59, 48);
+  --orange: rgb(255, 128, 0);
+  --yellow: rgb(255, 204, 0);
+  --green: rgb(52, 199, 89);
+  --teal: rgb(90, 200, 250);
+  --blue: rgb(0, 122, 255);
+  --indigo: rgb(88, 86, 214);
+  --purple: rgb(175, 82, 222);
+  --pink: rgb(255, 45, 85);
+  --gray: rgb(142, 142, 147);
+  --gray2: rgb(174, 174, 178);
+  --gray3: rgb(199, 199, 204);
+  --gray4: rgb(209, 209, 214);
+  --gray5: rgb(229, 229, 234);
+  --gray6: rgb(242, 242, 247);
+  --text: rgb(0, 0, 0);
+  --secondary-text: rgb(60, 60, 67);
+  --placeholder-text: rgb(60, 60, 67);
+  --code: var(--purple);
+  --link: var(--orange);
+  --separator: rgb(60, 60, 67);
+  --opaque-separator: rgb(198, 198, 200);
+  --fill: rgb(120, 120, 128);
+  --secondary-fill: rgb(120, 120, 128);
+  --background: rgb(242, 242, 247);
+  --secondary-background: #1d1d1d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --red: rgb(255, 69, 58);
+    --yellow: rgb(255, 214, 10);
+    --green: rgb(48, 209, 88);
+    --teal: rgb(100, 210, 255);
+    --blue: rgb(10, 132, 255);
+    --indigo: rgb(94, 92, 230);
+    --purple: rgb(191, 90, 242);
+    --pink: rgb(255, 55, 95);
+    --gray: rgb(142, 142, 147);
+    --gray2: rgb(99, 99, 102);
+    --gray3: rgb(72, 72, 74);
+    --gray4: rgb(58, 58, 60);
+    --gray5: rgb(44, 44, 46);
+    --gray6: rgb(28, 28, 30);
+    --text: rgb(255, 255, 255);
+    --secondary-text: rgb(235, 235, 245);
+    --placeholder-text: rgb(235, 235, 245);
+    --separator: rgb(84, 84, 88);
+    --opaque-separator: rgb(56, 56, 58);
+    --fill: rgb(120, 120, 128);
+    --secondary-fill: rgb(120, 120, 128);
+    --background: rgb(14, 14, 15);
+    --secondary-background: rgb(28, 28, 30);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-size: 14px;
+  font-size: 16px;
   font-family: telexregular, Hiragino Sans GB, Microsoft YaHei, sans-serif;
-  color: #222D32;
-  background-color: #f2f1f6;
+  color: #555;
+  background-color: #fff;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -35,7 +319,9 @@ li {
 
 hr {
   width: 4em;
-  border: none;
+  -webkit-box-ordinal-group: none;
+      -ms-flex-order: none;
+          order: none;
   border-top: 1px dashed #d0d0d0;
   border-bottom: 1px dashed background-color;
 }
@@ -56,11 +342,11 @@ hr {
 
 a, header #header h1 a, article .title a, article .meta .tags a, article .divider a {
   text-decoration: none;
-  color: #0062cb;
+  color: #bb2222;
 }
 
 a:hover, header #header h1 a:hover, article .title a:hover, article .meta .tags a:hover, article .divider a:hover {
-  color: #0062cb;
+  color: #dd1144;
 }
 
 blockquote {
@@ -232,7 +518,7 @@ ul.listing li.listing-item time {
 }
 
 ul.listing li.listing-item:hover {
-  background-color: #f2f1f6;
+  background-color: #fff;
 }
 
 ul.listing li.fa-li {
@@ -299,7 +585,7 @@ article .divider header #header h1 a i, header #header h1 article .divider a i, 
 }
 
 article .divider header #header h1 a i:hover, header #header h1 article .divider a i:hover, article .divider a i:hover {
-  color: #0062cb !important;
+  color: #bb2222 !important;
 }
 
 article .divider {
@@ -380,23 +666,17 @@ footer a:hover, footer header #header h1 a:hover, header #header h1 footer a:hov
   line-height: 1.6;
 }
 
-/*.like-wrapper {
-  color: #999;
-  .like-button, .unlike-button { font-family: "FontAwesome"; padding-right: 5px; }
-  .like-button:hover { color: #dd1144; }
-  .like-button.liked:hover { color: #999; }
-}*/
 @media (prefers-color-scheme: dark) {
   header #header h1 a {
     color: #ccc;
   }
   body {
-    color: #FFFFFF;
-    background-color: #1d1d1e;
+    color: #ccc;
+    background-color: #222;
   }
   blockquote {
-    background-color: #1d1d1e;
-    border-left: 3px solid #FFFFFF;
+    background-color: #222;
+    border-left: 3px solid #ccc;
   }
   code {
     background: #1d1d1d;
@@ -414,31 +694,31 @@ footer a:hover, footer header #header h1 a:hover, header #header h1 footer a:hov
     color: #ccc;
   }
   article .meta .tags header #header h1 a, header #header h1 article .meta .tags a, article .meta .tags a {
-    color: #FFFFFF;
+    color: #ccc;
   }
   article .divider i {
-    color: #FFFFFF;
+    color: #ccc;
   }
   article .divider header #header h1 a i, header #header h1 article .divider a i, article .divider .meta .tags a i, article .meta .tags .divider a i, article .divider a i {
-    color: #FFFFFF;
+    color: #ccc;
   }
   article .divider:before, article .divider:after {
     background-color: rgba(228, 227, 255, 0.15);
   }
   ul.listing li.listing-item:hover {
-    background-color: #1d1d1e;
+    background-color: #222;
   }
   ul.listing li.year-seperator {
     color: #ccc;
   }
   footer {
-    color: #FFFFFF;
+    color: #ccc;
   }
   footer a, footer header #header h1 a, header #header h1 footer a, footer article .title a, article .title footer a, footer article .meta .tags a, article .meta .tags footer a, footer article .divider a, article .divider footer a {
-    color: #FFFFFF;
+    color: #ccc;
   }
   footer a:hover, footer header #header h1 a:hover, header #header h1 footer a:hover, footer article .meta .tags a:hover, article .meta .tags footer a:hover {
-    color: #FFFFFF;
+    color: #ccc;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -7,7 +7,3 @@ permalink: /:title.html
 name: "熊猫文件"
 
 author: "zyvv"
-atom-baseurl: "zyvv.github.io"
-#disqus: "gopherwood"
-
-# navigations:
